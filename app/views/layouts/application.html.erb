@@ -3,12 +3,16 @@
   <head>
     <title>Myblog</title>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% if logged_in? %>
+      <div><%= "you are logged in as admin" %> <%= link_to "Log out", logout_path, method: :delete %></div>
+    <% end %>
     <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

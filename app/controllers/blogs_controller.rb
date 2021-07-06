@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy ]
+  before_action :admin_user, only: [:destroy ,:edit]
 
   # GET /blogs or /blogs.json
   def index
@@ -22,7 +23,7 @@ class BlogsController < ApplicationController
   # POST /blogs or /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
+    
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: "Blog was successfully created." }
@@ -65,5 +66,9 @@ class BlogsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def blog_params
       params.require(:blog).permit(:title, :content)
+    end
+    
+    def admin_user
+      redirect_to(root_url) unless current_user && current_user.admin?
     end
 end
