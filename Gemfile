@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # マークダウン形式で表示するためのgem
-gem 'redcarpet', '~> 2.3.0'
+gem 'redcarpet'
 # シンタックスハイライトに対応させるためのgem
 gem 'coderay'
 
