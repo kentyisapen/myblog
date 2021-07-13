@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
@@ -67,3 +69,25 @@ function uploadAttachment(attachment) {
       editor.insertAttachment(attachment)
     }
   })
+  
+  addEventListener("trix-initialize", event => {
+    const { toolbarElement } = event.target
+    const blockTools = toolbarElement.querySelector("[data-trix-button-group=block-tools]")
+    blockTools.insertAdjacentHTML("afterbegin", `
+      <button type="button" class="trix-button" data-trix-action="code-highlight" title="Code Highligt" tabindex="-1">CH</button>
+    `)
+  })
+  
+  addEventListener("trix-action-invoke", event => {
+    if (event.actionName == "code-highlight") {
+      const { editor } = event.target
+      const attachment = new Trix.Attachment({ content: "<hr>", contentType: "application/vnd.trix.code-highlight.html" })
+      editor.insertAttachment(attachment)
+    }
+  })
+  
+  $(document).on('turbolinks:load', function(){
+    let code = $('<code></code>');
+    $("pre").wrapInner(code);
+  });
+  

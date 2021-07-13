@@ -41,6 +41,7 @@ gem 'shrine'
 gem 'image_processing'
 gem 'mini_magick'
 gem 'rmagick'
+gem "jquery-rails"
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
