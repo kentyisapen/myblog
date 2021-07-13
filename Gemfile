@@ -37,6 +37,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'trix'
+gem 'shrine'
+gem 'image_processing'
+gem 'mini_magick'
+gem 'rmagick'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

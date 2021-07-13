@@ -20,3 +20,12 @@ $gray-medium-light: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
+
+ img {
+    max-width: 300px;
+        height: auto;
+  }
+
+.attachment__name, .attachment__size {
+  display: none;
+}

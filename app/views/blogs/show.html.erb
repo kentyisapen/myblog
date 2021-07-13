@@ -7,7 +7,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= sanitize @blog.content %>
+    <%= sanitize @blog.content%>
 </p>
 <% if current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_blog_path(@blog) %> 
