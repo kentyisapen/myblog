@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "summernote-bs4";
+
 
 /* mixins, variables, etc. */
 
@@ -19,4 +21,10 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+h2 {
+  padding: 1rem 2rem;
+  border-left: 6px double #080;
+  border-bottom: 3px dotted #000;
 }
