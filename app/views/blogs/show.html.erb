@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+<h1 class="title">
+  <strong><%= @blog.title %></strong>
+</h1>
 
 <p>
-  <strong>Content:</strong>
-    <%= sanitize @blog.content %>
+    <div id="content">
+      <%= sanitize @blog.content %>
+    </div>
 </p>
 <% if current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_blog_path(@blog) %> 

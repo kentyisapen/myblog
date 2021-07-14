@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Railsでブログアプリを作成
 
-Things you may want to cover:
+## 使用技術
+- Rails 5.1.7
+- Ruby 2.6.3
+- AWS EC2 (Ubuntu)
+- Postgressql
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 主な機能
+- 簡易管理者機能
+- sassページネーション
+- Trix HTMLエディタ
+- Shrine 画像アップロード機能
