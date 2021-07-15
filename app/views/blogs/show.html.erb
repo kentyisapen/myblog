@@ -1,12 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @blog.title %>
-</p>
+</h1>
+<div class="date">
+  <%= @blog.updated_at.in_time_zone('Tokyo') %> に更新
+  <% zisa = Time.parse(Time.now.to_s.slice(0..(Time.now.to_s.rindex(' ').to_i - 1))).to_i - Time.parse(@blog.updated_at.to_s.slice(0..(@blog.updated_at.to_s.rindex(' ').to_i - 1))).to_i %>
+  <%# zisa = 31536000 * 3%>
+  <% if zisa >= 31536000 %>
+    <p class="old-content">この記事は掲載から <%= zisa / 31536000 %> 年以上経過しています。</p>
+  <% end %>
+</div>
 
 <p>
-  <strong>Content:</strong>
   <%=raw @blog.content %>
 </p>
 <% if current_user && current_user.admin? %>
