@@ -15,7 +15,7 @@
   <body>
     <%= render 'layouts/header' %>
     <% if logged_in? %>
-      <div><%= "you are logged in as admin" %> <%= link_to "Log out", logout_path, method: :delete %></div>
+      <div class="header3"><%= "you are logged in as admin" %> <%= link_to "Log out", logout_path, method: :delete %></div>
     <% end %>
     <div id="body-area">
       <%= yield %>

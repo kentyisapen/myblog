@@ -89,8 +89,30 @@ header div:first-child{
   left: calc((100% / 2));
 }
 
+.header3 {
+  text-align: center;
+}
+
 .sub-menu img {
   border: 1px solid #000000;
   border-radius: 4px;
   box-shadow:0 0 4px #000000;
+}
+
+.blog-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-list-item {
+  box-sizing: border-box;
+  flex: 0 1 calc((100% / 2) - 10px);
+  padding: 10px;
+  margin-top: 10px; /* カラム間の隙間 */
+  margin-left: 10px; /* カラム間の隙間 */
+  .item-title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2em;
+  }
 }

@@ -16,6 +16,6 @@
   <%=raw @blog.content %>
 </p>
 <% if current_user && current_user.admin? %>
-  <%= link_to 'Edit', edit_blog_path(@blog) %> 
+  <%= link_to '編集', edit_blog_path(@blog) %> 
 <% end %>
-<%= link_to 'Back', blogs_path %>
+<%= link_to '戻る', blogs_path %>
