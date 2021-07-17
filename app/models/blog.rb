@@ -1,4 +1,5 @@
 class Blog < ApplicationRecord
+  mount_uploader :image, ImagesUploader
   after_save :create_id_digest # saveが完了した後に呼び出されるコールバック
 
   def to_param

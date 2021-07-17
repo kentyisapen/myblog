@@ -3,8 +3,12 @@
 <h1>Blogs</h1>
 
 <section class="blog-list-container">
-  <% @blogs.reverse_each.each_with_index do |blog , i| %>
+  
+    <% @blogs.reverse_each.each_with_index do |blog , i| %>
     <section class="blog-list-item">
+      <%= link_to blog do %>
+        <%= image_tag blog.image_url(:thumb) if blog.image.present? %>
+      <% end %>
       <div class="item-title"><%= link_to blog.title, blog, 'data-turbolinks': false %></div>
       <div><%= blog.created_at.in_time_zone('Tokyo').to_s.slice(0..(Time.now.to_s.rindex(' ').to_i - 1)) %></div>
       <div><%= link_to '記事を読む', blog, 'data-turbolinks': false %></div>
