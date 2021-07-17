@@ -36,9 +36,15 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+#summernote
 gem 'summernote-rails'
 gem 'jquery-rails'
 gem 'simple_form'
+
+#thumbnail
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
