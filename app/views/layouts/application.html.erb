@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <meta name="twitter:card" content='summary' />
+    <meta name="twitter:site" content='@kenty9869' />
+    <meta property="og:url" content=<%= request.url %> />
+    <% if request.url.to_s.include?("blogs/") %>
+      <meta property="og:title" content=<%= @blog.title %> />
+      <meta property="og:description" content= <%= @blog.detail %> />
+      <meta property="og:image" content=<%= request.url + @blog.image.to_s %> >
+    <% end %>
   </head>
 
   <body>
