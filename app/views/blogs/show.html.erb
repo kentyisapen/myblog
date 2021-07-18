@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%=raw @blog.thumnail %>
-</p>
+<div class="blog-thumbnail">
+  <%= raw @blog.thumnail %>
+</div>
 
-<h5>
+<h4>
   <%= @blog.details %>
-</h5>
+</h4>
 
 <h1>
   <%= @blog.title %>
