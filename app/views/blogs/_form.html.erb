@@ -10,6 +10,14 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= form.input :thumnail,as: :summernote, id: :blog_thumbnail %>
+  </div>
+  
+  <div class="field">
+    <%= form.input :details, id: :blog_details %>
+  </div>
 
   <div class="field">
     <%= form.input :title, id: :blog_title %>
