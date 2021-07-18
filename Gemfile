@@ -39,6 +39,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'summernote-rails'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'carrierwave'
+gem 'fog'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

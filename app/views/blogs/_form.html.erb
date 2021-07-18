@@ -10,7 +10,16 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <div class="field">
+    <%= form.file_field :image, id: :blog_image %>
+  </div>
+  
+  <div class="field">
+    <%= form.input :detail, id: :blog_detail %>
+  </div>
+  
+  
   <div class="field">
     <%= form.input :title, id: :blog_title %>
   </div>

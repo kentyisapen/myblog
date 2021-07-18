@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<div class="img-wrapper">
+  <%= image_tag @blog.image.to_s ,class:"blog-image"%>
+</div>
+
+<h4>
+  <%= @blog.detail %>
+</h4>
+
 <h1>
   <%= @blog.title %>
 </h1>
