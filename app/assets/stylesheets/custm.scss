@@ -115,4 +115,12 @@ header div:first-child{
     font-weight: bold;
     line-height: 1.2em;
   }
+  p {
+    height: calc(100% - 9em );
+    img {
+      width:100%!important;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
