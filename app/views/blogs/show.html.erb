@@ -21,7 +21,7 @@
 </div>
 
 <p>
-  <%=raw @blog.content %>
+  <%= raw @blog.content %>
 </p>
 <% if current_user && current_user.admin? %>
   <%= link_to '編集', edit_blog_path(@blog) %> 

@@ -7,7 +7,7 @@
 <section class="blog-list-container">
   <% @blogs.reverse_each.each_with_index do |blog , i| %>
     <section class="blog-list-item">
-      <%= link_to blog  do %>
+      <%= link_to blog, 'data-turbolinks': false  do %>
         <%= raw blog.thumnail %>
       <% end %>
       <div class="item-title"><%= link_to blog.title, blog, 'data-turbolinks': false %></div>
